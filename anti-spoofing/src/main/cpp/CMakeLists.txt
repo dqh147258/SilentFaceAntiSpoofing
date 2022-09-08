@@ -6,16 +6,16 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/../../../distribution/$
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_library(ncnn STATIC IMPORTED)
-set_target_properties(ncnn PROPERTIES IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libncnn.a)
+set_target_properties(ncnn PROPERTIES IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/../cmakeLibs/${ANDROID_ABI}/libncnn.a)
 
 add_library(opencv_core STATIC IMPORTED)
-set_target_properties(opencv_core PROPERTIES IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libopencv_core.so)
+set_target_properties(opencv_core PROPERTIES IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/../cmakeLibs/${ANDROID_ABI}/libopencv_core.so)
 
 add_library(opencv_imgproc STATIC IMPORTED)
-set_target_properties(opencv_imgproc PROPERTIES IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libopencv_imgproc.so)
+set_target_properties(opencv_imgproc PROPERTIES IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/../cmakeLibs/${ANDROID_ABI}/libopencv_imgproc.so)
 
 add_library(opencv_codecs STATIC IMPORTED)
-set_target_properties(opencv_codecs PROPERTIES IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/../jniLibs/${ANDROID_ABI}/libopencv_imgcodecs.so)
+set_target_properties(opencv_codecs PROPERTIES IMPORTED_LOCATION ${PROJECT_SOURCE_DIR}/../cmakeLibs/${ANDROID_ABI}/libopencv_imgcodecs.so)
 
 
 file(GLOB jni_srcs
